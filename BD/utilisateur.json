@@ -5,60 +5,60 @@
 		"nom" : "bath",
 		"prenom" : "anita",
 		"listRole" : ["membre","administrateur"],
-		"note" : "4",
+		"note" : 4,
 		"adresse" : {
-			"numero" : "2",
+			"numero" : 2,
 			"nom" : "Route de Ganges",
 			"ville" : "Montpellier",
 			"pays" : "France"
 		},
 		"telephone" : "0656583942",
-		"age" : "21"
+		"age" : 21
 	},
 	{
 		"email":"yuri.nator@yopmail.com",
 		"nom" : "Nator",
 		"prenom" : "Yuri",
 		"listRole" : ["membre"],
-		"note" : "2",
+		"note" : 2,
 		"adresse" : {
-			"numero" : "5",
+			"numero" : 5,
 			"nom" : "Lottissement la Faïence",
 			"ville" : "Connaux",
 			"pays" : "France"
 		},
 		"telephone" : "0174891431",
-		"age" : "51"
+		"age" : 51
 	},
 	{
 		"email":"maya.normousbutt@yopmail.com",
 		"nom" : "Normousbutt",
 		"prenom" : "Maya",
 		"listRole" : ["membre"],
-		"note" : "4",
+		"note" : 4,
 		"adresse" : {
-			"numero" : "10",
+			"numero" : 10,
 			"nom" : "Rue des oliviers",
 			"ville" : "Pexiora",
 			"pays" : "France"
 		},
 		"telephone" : "066806776",
-		"age" : "31"
+		"age" : 31
 	},
 	{
 		"email" : "judas.nanas@yopmail.com",
 		"nom" : "Nanas",
 		"prenom" : "Judas",
 		"listRole" : ["membre"],
-		"note" : "1",
+		"note" : 1,
 		"adresse" : {
-			"numero" : "5",
+			"numero" : 5,
 			"nom" : "Rue des Pénitents",
 			"ville" : "Saussan",
 			"pays" : "France"
 		},
 		"telephone" : "0601990804",
-		"age" : "26"
+		"age" : 26
 
 	},
 	{
@@ -66,30 +66,30 @@
 		"nom" : "Closof",
 		"prenom" : "Oliver",
 		"listRole" : ["membre"],
-		"note" : "5",
+		"note" : 5,
 		"adresse" : {
-			"numero" : "12",
+			"numero" : 12,
 			"nom" : "Rue du manteau jaune",
 			"ville" : "Lyon",
 			"pays" : "France"
 		},
 		"telephone" : "0613181542",
-		"age" : "18"
+		"age" : 18
 	},
 	{
 		"email" : "seymour.butz @yopmail.com",
 		"nom" : "Butz",
 		"prenom" : "Seymour",
 		"listRole" : ["membre"],
-		"note" : "4.5",
+		"note" : 4.5,
 		"adresse" : {
-			"numero" : "6",
+			"numero" : 6,
 			"nom" : "Rue du Boulevard",
 			"ville" : "Monclus",
 			"pays" : "France"
 		},
 		"telephone" : "0687372453",
-		"age" : "63"
+		"age" : 63
 	},
 	{
 		"email":"moe.ronn@yopmail.com",
