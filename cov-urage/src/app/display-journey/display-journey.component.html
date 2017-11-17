@@ -1,0 +1,16 @@
+<p>
+	{{message}}
+</p>
+<ul>
+	<li *ngFor="let t of trajets">
+		{{t.depart.ville}} --> {{t.arrive.ville}} pour {{t.prix}} €
+	</li>
+</ul>
+<p>Voici les trajets accessibles (Sans Corée du Nord ) : </p>
+<ul>
+	<div *ngFor="let t of trajets ">
+	<li *ngIf = "t.depart.pays != 'Corée du Nord' && t.arrive.pays != 'Corée du Nord'" > 
+		{{t.depart.ville}} --> {{t.arrive.ville}} pour {{t.prix}} €
+	</li>
+	</div>
+</ul>

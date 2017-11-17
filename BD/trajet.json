@@ -17,7 +17,7 @@
 			"pays" : "France"
 
 		},
-		"arrivé" :{
+		"arrive" :{
 			"numero" :4,
 			"nom" : "Rue du Canard",
 			"ville" : "Toulouse",
@@ -48,7 +48,7 @@
 			"pays" : "Portugal"
 
 		},
-		"arrivé" :{
+		"arrive" :{
 			"numero" : 1,
 			"nom" : "Place de l'idéal Nord Coréen",
 			"ville" : "Pyongyang",
@@ -79,7 +79,7 @@
 			"pays" : "Corée du Nord"
 
 		},
-		"arrivé" :{
+		"arrive" :{
 			"numero" : 1,
 			"nom" : "Place Kim Il-sung",
 			"ville" : "Pyongyang",
