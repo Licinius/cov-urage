@@ -25,4 +25,15 @@ function trajetResearch(db,param,callback){
 MongoClient.connect(url, function(error, db) {
     assert.equal(null,error);
     console.log("Connecté à la base de données cov-urage");
+    app.get("/trajets/villeD/villeA",function(req,res){
+    	let filterObject = {};
+    	if(req.params.villeD != "*"){filterObject.depart.ville = req.params.villeD;}
+    	if(req.params.villeA != "*"){filterObject.arrive.ville = req.params.villeA;}
+    	trajetResearch(db,{"message" : "/trajets","filterObject": filterObject},function(step,results){
+    		console.log(step + "avec" + results.length + "trajets selectionnés : ");
+    		res.setHeader("Content-type","application/json; charset = UTF-8");
+    		let json = JSON.stringify(results);
+    		res.end(json);
+    	})
+    });
 });
