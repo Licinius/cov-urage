@@ -11,6 +11,7 @@ export class DisplayJourneyComponent implements OnInit {
 	constructor(private trajetService : TrajetService) { }
 
 	ngOnInit() {
+		console.log(this.trajets);
 		this.trajetService.getTrajets().subscribe(res=>this.trajets=res);
 	}
 
