@@ -40,12 +40,11 @@ mongoClient.connect(url, function(error, db) {
     assert.equal(null,error);
     console.log("Connecté à la base de données cov-urage");
     app.get("/trajets/:villeD/:villeA",function(req,res){
-    	let filterObject = {};
-        filterObject.depart ={};
-        filterObject.arrive={};
-    	if(req.params.villeD != "*"){filterObject.depart.ville = req.params.villeD;}
-    	if(req.params.villeA != "*"){filterObject.arrive.ville = req.params.villeA;}
-        console.log(filterObject.depart.ville + "->" + filterObject.arrive.ville );
+    	let filterObject = {'depart.ville' : null,'arrive.ville' : null};
+
+    	if(req.params.villeD != "*"){filterObject['depart.ville'] = req.params.villeD;}
+    	if(req.params.villeA != "*"){filterObject['arrive.ville'] = req.params.villeA;}
+        console.log(filterObject['depart.ville'] + "->" + filterObject['arrive.ville'] );
 
 
     	trajetResearch(db,{"message" : "/trajets","filterObject": filterObject},function(step,results){
