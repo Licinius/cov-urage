@@ -23,7 +23,8 @@ function trajetResearch(db,param,callback){
 	});
 }
 function trajetAll(db,param,callback){
-	db.collection("trajets").find({}).toArray(function(err,documents){
+	console.log("trajetAll");
+	db.collection("trajets").find().toArray(function(err,documents){
 		if (err)
 			callback(err,[]);
 		else if (documents !== undefined) 
