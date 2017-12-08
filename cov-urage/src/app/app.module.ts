@@ -4,12 +4,12 @@ import {TrajetService} from './journey/trajet.service';
 import {HttpClientModule} from '@angular/common/http'
 
 import { AppComponent } from './app.component';
-import { DisplayJourneyComponent } from './journey/display-journey/display-journey.component';
+import { SearchJourneyComponent } from './journey/search-journey/search-journey.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    DisplayJourneyComponent
+    SearchJourneyComponent
   ],
   imports: [
     BrowserModule,

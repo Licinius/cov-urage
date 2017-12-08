@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { DisplayJourneyComponent } from './display-journey.component';
+import { SearchJourneyComponent } from './search-journey.component';
 
-describe('DisplayJourneyComponent', () => {
-  let component: DisplayJourneyComponent;
-  let fixture: ComponentFixture<DisplayJourneyComponent>;
+describe('SearchJourneyComponent', () => {
+  let component: SearchJourneyComponent;
+  let fixture: ComponentFixture<SearchJourneyComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ DisplayJourneyComponent ]
+      declarations: [ SearchJourneyComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(DisplayJourneyComponent);
+    fixture = TestBed.createComponent(SearchJourneyComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
