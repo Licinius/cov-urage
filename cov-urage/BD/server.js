@@ -65,9 +65,6 @@ mongoClient.connect(url, function(error, db) {
 
 		if(req.params.villeD != "*"){filterObject['depart.ville'] = req.params.villeD;}
 		if(req.params.villeA != "*"){filterObject['arrive.ville'] = req.params.villeA;}
-		console.log(filterObject['depart.ville'] + "->" + filterObject['arrive.ville'] );
-
-
 		trajetResearch(db,{"message" : "/trajets","filterObject": filterObject},function(step,results){
 			console.log("\n" + step + "avec" + results.length + "trajets selectionnés : ");
 			res.setHeader("Content-type","application/json; charset = UTF-8");
