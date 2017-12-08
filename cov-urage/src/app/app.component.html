@@ -3,13 +3,17 @@
   <h1>
     Bienvenue sur {{title}}!
   </h1>
-  <img width="300" src="http://www.covoiturage36.com/images/101-voiture.png">
+  <a href="http://localhost:4200/"><img width="300" src="http://www.covoiturage36.com/images/101-voiture.png" ></a>
 </div>
-<form>
+
+
+<form routerLink = "/search">
 	<input type="text" name="depart" placeholder="Depart" required>
 	<input type="text" name="arrivee" placeholder="Arrivée" required>
 	<input type="date" name="date" required>
 	<input type="submit" value="Rechercher">
+
 </form>
 
 
+<router-outlet></router-outlet>
