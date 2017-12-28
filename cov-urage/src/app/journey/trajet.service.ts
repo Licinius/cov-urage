@@ -8,8 +8,9 @@ export class TrajetService {
 
 	constructor(private http : HttpClient) { }
 
-	getTrajets():Observable <any>{
-		return this.http.get("http://localhost:8888/trajets");
+	getTrajets(parametres: string):Observable <any>{
+		let url: string = 'http://localhost:8888/trajets/' + parametres;
+		return this.http.get(url);
 	}
 
 

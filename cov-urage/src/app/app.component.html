@@ -7,13 +7,15 @@
 </div>
 
 
-<form routerLink = "/search">
-	<input type="text" name="depart" placeholder="Depart" required>
-	<input type="text" name="arrivee" placeholder="Arrivée" required>
-	<input type="date" name="date" required>
-	<input type="submit" value="Rechercher">
 
-</form>
+<input type="text" name="depart" placeholder="Depart" [(ngModel)] = "depart">
+<input type="text" name="arrivee" placeholder="Arrivée" [(ngModel)] = "arrive">
+<input type="date" name="date" [(ngModel)] = "jour" >
+<a *ngIf="depart && arrive && jour " [routerLink] = "['search',depart,arrive]" >Rechercher</a>
 
 
+
+<p *ngIf ="depart || arrive || jour ">
+	Tous les trajets de {{depart}} à {{arrive}} pour le {{jour | date : "dd/MM/yyyy"}}
+</p>
 <router-outlet></router-outlet>
