@@ -1,0 +1,17 @@
+<form *ngIf="!auth.isLoggedIn" (ngSubmit)= "onSubmit()" #loginForm = "ngForm">
+	<div class = "form-group">
+		<label for="login"> Login </label>
+		<input type="text" class ="form-control" id="login"  required placeholder="email" [(ngModel)]="login" name = "login"/>
+	</div>
+
+	<div>
+		<label for="pass">Password</label>
+		<input type="password" class ="form-control" id="pass"  required placeholder="password" [(ngModel)]="pass" name = "pass"/>
+	</div>
+	<button type = "Submit">Envoyer</button>
+</form>
+<div *ngIf="auth.isLoggedIn">
+	Vous ({{login}}) est connecté
+	<br/><br/>
+	<button (click)="logout()"> Déconnecter</button>
+</div>

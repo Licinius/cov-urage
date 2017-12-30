@@ -61,6 +61,7 @@ mongoClient.connect(url, function(error, db) {
 
 
 	app.get("/trajets/:villeD/:villeA",function(req,res){
+		console.log("Trajets ville départ et ville arrivé");
 		let filterObject = {'depart.ville' : null,'arrive.ville' : null};
 
 		if(req.params.villeD != "*"){filterObject['depart.ville'] = req.params.villeD;}
@@ -86,5 +87,19 @@ mongoClient.connect(url, function(error, db) {
 			res.end(json);
 		});
 	});
+	//Authentification
+	app.get("/auth/login=:login/password=:password",function(req,res){
+		console.log ("Authentification");
+		let login  = req.params.login;
+		let password = req.params.password;
+		console.log("Login : " + login + "  -  pass : "+password);
+		res.setHeader("Content-type","text/plain; charset=UTF-8");
+		db.collection("users").find({"email":login, "password":password}).toArray (function(err,doc){
+			console.log(doc)
 
+			res.end(JSON.stringify(doc));
+
+			
+		});
+	});
 });

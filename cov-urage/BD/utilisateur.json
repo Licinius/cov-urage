@@ -13,7 +13,8 @@
 			"pays" : "France"
 		},
 		"telephone" : "0656583942",
-		"age" : 21
+		"age" : 21,
+		"password" : "douche"
 	},
 	{
 		"email":"yuri.nator@yopmail.com",
@@ -28,7 +29,8 @@
 			"pays" : "France"
 		},
 		"telephone" : "0174891431",
-		"age" : 51
+		"age" : 51,
+		"password" : "toilette"
 	},
 	{
 		"email":"maya.normousbutt@yopmail.com",
@@ -43,7 +45,8 @@
 			"pays" : "France"
 		},
 		"telephone" : "066806776",
-		"age" : 31
+		"age" : 31,
+		"password" : "superslip"
 	},
 	{
 		"email" : "judas.nanas@yopmail.com",
@@ -58,7 +61,8 @@
 			"pays" : "France"
 		},
 		"telephone" : "0601990804",
-		"age" : 26
+		"age" : 26,
+		"password" : "jesusabricot"
 
 	},
 	{
@@ -74,7 +78,8 @@
 			"pays" : "France"
 		},
 		"telephone" : "0613181542",
-		"age" : 18
+		"age" : 18,
+		"password" : "vetement"
 	},
 	{
 		"email" : "seymour.butz @yopmail.com",
@@ -89,12 +94,14 @@
 			"pays" : "France"
 		},
 		"telephone" : "0687372453",
-		"age" : 63
+		"age" : 63,
+		"password" : "butz"
 	},
 	{
 		"email":"moe.ronn@yopmail.com",
 		"nom" : "Ronn",
 		"prenom" : "Moe",
-		"listRole" : ["administrateur"]
+		"listRole" : ["administrateur"],
+		"password" : "duh"
 	}
 ]
