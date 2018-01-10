@@ -9,7 +9,6 @@ export class AuthService {
 
 	authentification(login,password): Observable<any []>{
 		let url: string = "http://localhost:8888/auth/login="+login + "/password=" +password;
-		console.log("Authentification service : " + url);
 		return this.http.get(url);
 	}
 

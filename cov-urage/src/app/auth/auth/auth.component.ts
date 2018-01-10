@@ -14,22 +14,18 @@ export class AuthComponent{
   constructor(public auth: AuthService) { }
 
 
-  checkIdentification(login,password){
-
-    this.auth.authentification(login,password).subscribe(res=>this.user=res);
-    return this.user!=undefined;
-  }
   onSubmit(){
-  	if(this.checkIdentification(this.login,this.pass)){
-      console.log("Ok");
-  	 this.auth.isLoggedIn =true;
-    }else{
-      console.log("Nope");
-      this.auth.isLoggedIn = false;
-      this.login = "";
-      this.pass ="";
-      this.user = null;
-    }
+      this.auth.authentification(this.login,this.pass).subscribe((res : any )=>{
+        this.user=res;
+        console.log(res);
+        if(res.length!=0){
+          console.log("Ok");
+          this.auth.isLoggedIn =true;
+        }else{
+          console.log("Nope");
+          this.logout();
+        }
+    });
   }
 
   logout(){

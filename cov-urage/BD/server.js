@@ -102,4 +102,27 @@ mongoClient.connect(url, function(error, db) {
 			
 		});
 	});
+
+	app.get("/user/create/:email/:nom/:prenom/:numero/:rue/:ville/:pays/:telephone/:age/:mdp",function(req,res){
+		console.log("Coucou hiboux !");
+		    var myUser = {
+		      email :req.params.email,
+		      nom :req.params.nom,
+		      prenom :req.params.prenom,
+		      adresse: {
+		        numero : req.params.numero,
+		        nom : req.params.rue,
+		        ville : req.params.ville,
+		        pays : req.params.pays
+		      },
+		      telephone : req.params.telephone,
+		      age : req.params.age,
+		      password :req.params.mdp
+		    };
+		    res.setHeader("Content-type","text/plain; charset=UTF-8");
+		    db.collection("userss").insertOne(myUser,function(err,doc){
+		    	if(err) throw err;
+		    	res.end(JSON.stringify(doc));
+		    });
+	});
 });

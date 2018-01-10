@@ -1,0 +1,19 @@
+
+
+<p>Inscription : </p>
+<form (ngSubmit)="onSubmit()">
+<input type="email" name="email" placeholder="email" [(ngModel)]="email" required>
+<input type="text" name="nom" placeholder="nom" [(ngModel)]="nom">
+<input type="text" name="prenom" placeholder="prenom" [(ngModel)]="prenom">
+<input type="text" name="telephone" placeholder="telephone" [(ngModel)]="telephone">
+<input type="number" name="age" placeholder="age" min="0" [(ngModel)]="age">
+<input type="password" name="password" placeholder="mot de passe" [(ngModel)]="mdp">
+<br>
+<label for="adresse" >Adresse : </label>
+<input type="number" id="adresse"  name="numero" placeholder="numéro" min="0" [(ngModel)]="numero">
+<input type = "text" id ="adresse" name ="rue" placeholder="voie" [(ngModel)]="rue">
+<input type="text" id="adresse" name="ville" placeholder="ville" [(ngModel)]="ville">
+<input type="text" id="adresse" name="pays" placeholder="pays" [(ngModel)]="pays">
+<input type="Submit" value="S'inscrire">
+</form>
+<p *ngIf= message>{{message}}</p>
