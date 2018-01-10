@@ -120,7 +120,7 @@ mongoClient.connect(url, function(error, db) {
 		      password :req.params.mdp
 		    };
 		    res.setHeader("Content-type","text/plain; charset=UTF-8");
-		    db.collection("userss").insertOne(myUser,function(err,doc){
+		    db.collection("users").insertOne(myUser,function(err,doc){
 		    	if(err) throw err;
 		    	res.end(JSON.stringify(doc));
 		    });
