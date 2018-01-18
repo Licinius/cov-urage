@@ -17,12 +17,9 @@ export class AuthComponent{
   onSubmit(){
       this.auth.authentification(this.login,this.pass).subscribe((res : any )=>{
         this.user=res;
-        console.log(res);
         if(res.length!=0){
-          console.log("Ok");
           this.auth.isLoggedIn =true;
         }else{
-          console.log("Nope");
           this.logout();
         }
     });

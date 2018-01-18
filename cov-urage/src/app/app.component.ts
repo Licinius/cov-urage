@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import {AuthGuardService} from './auth-guard.service'
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -6,4 +7,5 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'Cov@urage';
+  constructor(private logGuard: AuthGuardService){}
 }

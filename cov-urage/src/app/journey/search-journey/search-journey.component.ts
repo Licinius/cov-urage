@@ -14,8 +14,15 @@ export class SearchJourneyComponent implements OnInit {
 
 	ngOnInit() {
 		this.route.params.subscribe((params : Params)=> {
-			let subroute ="";
-			subroute = params['villeD']+"/" + params['villeA'];
+			let subroute:string;
+			let strDate:string;
+			if(params['date']==="undefined" || params['date']===""){
+				strDate = "*/*/*";
+			}else{
+				let date = new Date(params['date']);
+				strDate = date.getDate() + "/" + (date.getMonth()+1) + "/" +date.getFullYear();
+			}
+			subroute = params['villeD']+"/" + params['villeA']+"/"+strDate;
 			this.trajetService.getTrajets(subroute).subscribe(res=>this.trajets=res);
 			
 		});

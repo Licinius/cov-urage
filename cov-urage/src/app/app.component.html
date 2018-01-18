@@ -7,17 +7,22 @@
 </div>
 
 <app-auth></app-auth>
-<app-inscription></app-inscription>
+<div *ngIf="!logGuard.canActivate()">
+	<app-inscription></app-inscription>
+</div>
 <br/><br/><br/><br/>
 
 <input type="text" name="depart" placeholder="Depart" [(ngModel)] = "depart">
 <input type="text" name="arrivee" placeholder="Arrivée" [(ngModel)] = "arrive">
 <input type="date" name="date" [(ngModel)] = "jour" >
-<a *ngIf="depart && arrive && jour " [routerLink] = "['search',depart,arrive]" >Rechercher</a>
+<a *ngIf="depart && arrive" [routerLink] = "['search',depart,arrive,jour]" >Rechercher</a>
 
-
-
-<p *ngIf ="depart || arrive || jour ">
-	Tous les trajets de {{depart}} à {{arrive}} pour le {{jour | date : "dd/MM/yyyy"}}
+<p>
+<span *ngIf ="depart || arrive">
+	Tous les trajets de {{depart}} à {{arrive}} 
+</span>
+<span *ngIf="depart && arrive && jour">pour le {{jour | date : "dd/MM/yyyy"}}</span>
 </p>
-<router-outlet></router-outlet>
+<div *ngIf = "logGuard.canActivate()">
+	<router-outlet></router-outlet>
+</div>

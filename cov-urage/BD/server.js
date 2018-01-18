@@ -60,12 +60,16 @@ mongoClient.connect(url, function(error, db) {
 	});
 
 
-	app.get("/trajets/:villeD/:villeA",function(req,res){
+	app.get("/trajets/:villeD/:villeA/:jour/:mois/:annee",function(req,res){
 		console.log("Trajets ville départ et ville arrivé");
 		let filterObject = {'depart.ville' : null,'arrive.ville' : null};
 
+		if(req.params.jour != "*"){filterObject['date.jour']=parseInt(req.params.jour);}
+		if(req.params.mois != "*"){filterObject['date.mois']=parseInt(req.params.mois);}
+		if(req.params.annee != "*"){filterObject['date.année']=parseInt(req.params.annee);}
 		if(req.params.villeD != "*"){filterObject['depart.ville'] = req.params.villeD;}
 		if(req.params.villeA != "*"){filterObject['arrive.ville'] = req.params.villeA;}
+		console.log(req.params.jour);console.log(filterObject);
 		trajetResearch(db,{"message" : "/trajets","filterObject": filterObject},function(step,results){
 			console.log("\n" + step + "avec" + results.length + "trajets selectionnés : ");
 			res.setHeader("Content-type","application/json; charset = UTF-8");
