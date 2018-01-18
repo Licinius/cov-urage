@@ -15,13 +15,15 @@ import {InscriptionComponent} from './user/inscription/inscription.component'
 import { SearchJourneyComponent } from './journey/search-journey/search-journey.component';
 import { AppRoutingModule } from './/app-routing.module';
 import {AddUserComponent} from './journey/add-user/add-user.component';
+import { SortPipe } from './sort.pipe';
 @NgModule({
   declarations: [
     AppComponent,
     SearchJourneyComponent,
     AuthComponent,
     InscriptionComponent,
-    AddUserComponent
+    AddUserComponent,
+    SortPipe
 
   ],
   imports: [

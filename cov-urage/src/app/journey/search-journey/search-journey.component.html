@@ -1,6 +1,6 @@
 <ul>
-	<li *ngFor="let t of trajets">
-		{{t.depart.ville}} --> {{t.arrive.ville}} pour {{t.prix}} € 
+	<li *ngFor="let t of (trajets | sort:'prix')">
+		{{t.depart.ville}} --> {{t.arrive.ville}} le {{t.date.jour}} / {{t.date.mois}} / {{t.date.annee}} pour {{t.prix}} € 
 		<span *ngIf="t.place>t.participant.length && logGuard.getMail() != t.conducteur && !t.participant.includes(logGuard.getMail())"> <a  [routerLink] = "['/addUser',t._id]">M'ajouter</a></span>
 	</li>
 </ul>

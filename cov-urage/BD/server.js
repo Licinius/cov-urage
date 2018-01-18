@@ -66,7 +66,7 @@ mongoClient.connect(url, function(error, db) {
 
 		if(req.params.jour != "*"){filterObject['date.jour']=parseInt(req.params.jour);}
 		if(req.params.mois != "*"){filterObject['date.mois']=parseInt(req.params.mois);}
-		if(req.params.annee != "*"){filterObject['date.année']=parseInt(req.params.annee);}
+		if(req.params.annee != "*"){filterObject['date.annee']=parseInt(req.params.annee);}
 		if(req.params.villeD != "*"){filterObject['depart.ville'] = req.params.villeD;}
 		if(req.params.villeA != "*"){filterObject['arrive.ville'] = req.params.villeA;}
 		console.log(req.params.jour);console.log(filterObject);
