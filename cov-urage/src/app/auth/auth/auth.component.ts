@@ -19,6 +19,7 @@ export class AuthComponent{
         this.user=res;
         if(res.length!=0){
           this.auth.isLoggedIn =true;
+          this.auth.mail=this.login;
         }else{
           this.logout();
         }
@@ -30,6 +31,7 @@ export class AuthComponent{
     this.pass ="";
     this.user = null;
   	this.auth.isLoggedIn = false;
+    this.auth.mail="";
   }
 
 }

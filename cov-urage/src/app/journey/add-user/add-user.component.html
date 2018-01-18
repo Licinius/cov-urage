@@ -1,0 +1,4 @@
+<div *ngIf="isValid;then true_content else false_content"></div>
+
+<ng-template #true_content> Vous avez été correctement ajouté au trajet, BON VOYAGE ! </ng-template>
+<ng-template #false_content> Une erreur est survenue : vous participez peut-être déjà au trajet </ng-template>

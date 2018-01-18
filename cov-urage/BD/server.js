@@ -108,7 +108,7 @@ mongoClient.connect(url, function(error, db) {
 	});
 
 	app.get("/user/create/:email/:nom/:prenom/:numero/:rue/:ville/:pays/:telephone/:age/:mdp",function(req,res){
-		console.log("Coucou hiboux !");
+			console.log("Ajout d'un utilisateur");
 		    var myUser = {
 		      email :req.params.email,
 		      nom :req.params.nom,
@@ -128,5 +128,17 @@ mongoClient.connect(url, function(error, db) {
 		    	if(err) throw err;
 		    	res.end(JSON.stringify(doc));
 		    });
+	});
+
+	app.get("/addUser/:idVoyage/:login",function(req,res){
+		console.log("addUser");
+		let idVoyage = req.params.idVoyage;
+		let login = req.params.login;
+		res.setHeader("Content-type","text/plain; charset=UTF-8");
+		db.collection("trajets").update({"_id":ObjectId(idVoyage)},{'$addToSet':{'participant':login}},function(err,doc){
+		    if(err) throw err;
+		    console.log(doc);
+		    res.end(JSON.stringify(doc));
+		});
 	});
 });

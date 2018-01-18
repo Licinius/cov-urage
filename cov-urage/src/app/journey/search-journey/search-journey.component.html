@@ -1,13 +1,6 @@
 <ul>
 	<li *ngFor="let t of trajets">
-		{{t.depart.ville}} --> {{t.arrive.ville}} pour {{t.prix}} €
+		{{t.depart.ville}} --> {{t.arrive.ville}} pour {{t.prix}} € 
+		<span *ngIf="t.place>t.participant.length && logGuard.getMail() != t.conducteur && !t.participant.includes(logGuard.getMail())"> <a  [routerLink] = "['/addUser',t._id]">M'ajouter</a></span>
 	</li>
-</ul>
-<p>Voici les trajets accessibles (Sans Corée du Nord ) : </p>
-<ul>
-	<div *ngFor="let t of trajets ">
-	<li *ngIf = "t.depart.pays != 'Corée du Nord' && t.arrive.pays != 'Corée du Nord'" > 
-		{{t.depart.ville}} --> {{t.arrive.ville}} pour {{t.prix}} €
-	</li>
-	</div>
 </ul>

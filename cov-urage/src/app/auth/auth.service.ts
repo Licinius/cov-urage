@@ -5,6 +5,7 @@ import {Observable} from 'rxjs/Rx';
 @Injectable()
 export class AuthService {
 	isLoggedIn: boolean = false;
+	mail: string = "";
 	constructor(private http: HttpClient) {}
 
 	authentification(login,password): Observable<any []>{

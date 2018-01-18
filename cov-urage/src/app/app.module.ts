@@ -14,12 +14,15 @@ import {AuthComponent} from './auth/auth/auth.component';
 import {InscriptionComponent} from './user/inscription/inscription.component'
 import { SearchJourneyComponent } from './journey/search-journey/search-journey.component';
 import { AppRoutingModule } from './/app-routing.module';
+import {AddUserComponent} from './journey/add-user/add-user.component';
 @NgModule({
   declarations: [
     AppComponent,
     SearchJourneyComponent,
     AuthComponent,
-    InscriptionComponent
+    InscriptionComponent,
+    AddUserComponent
+
   ],
   imports: [
     BrowserModule,

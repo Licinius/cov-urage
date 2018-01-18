@@ -12,4 +12,7 @@ export class AuthGuardService implements CanActivate {
 		}
 		return false;
 	}
+	getMail(){
+		return this.authService.mail;
+	}
 }
